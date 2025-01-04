@@ -61,12 +61,14 @@ public class Carta {
         return getValidFaceNames().indexOf(faceName) + 2;
     }
 
+    @SuppressWarnings("exports")
     public Image getImage()
     {
         String pathName = "resouces/br/ifsp/edu/br"+faceName+suit+".png";
         return new Image(Carta.class.getResourceAsStream(pathName));
     }
 
+    @SuppressWarnings("exports")
     public Image getBackOfCardImage()
     {
         return new Image(Carta.class.getResourceAsStream("resources/br/ifsp/edu/br/interrogacao.png"));
